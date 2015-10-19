@@ -35,4 +35,5 @@ CFLAGS  =  -I/usr/local/mysql/include \
            -Wl,-rpath=/usr/local/mysql/lib \
            -lmysqlcppconn \
 ```
-如果mysql的库路径没有被编辑在**/etc/ld.so.conf.d/**目录中（要有root权限，并且用ldconfig命令刷新），则需要用**-Wl,-rpath**选项指定。
+如果mysql的库路径没有被编辑在**/etc/ld.so.conf.d/**目录中（要有root权限，并用ldconfig命令刷新）的话，  
+则需要用**-Wl,-rpath**选项指定。
