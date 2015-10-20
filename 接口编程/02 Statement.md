@@ -1,10 +1,11 @@
 Statement
 =========
+执行SQL语句的类
 ##头文件
 ```cpp
 #include <cppconn/statement.h>
 ```
-##Statement类
+##类
 是一个接口类。只包含纯虚函数。
 ```cpp
 sql::Statement *stmt;
