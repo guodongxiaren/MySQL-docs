@@ -65,7 +65,6 @@ int main()
     pstmt->setString(2, "b");
     pstmt->execute();
 
-
     delete pstmt;
     delete con;
 }
