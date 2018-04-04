@@ -1,22 +1,22 @@
 Statement
 =========
-Ö´ĞĞSQLÓï¾äµÄÀà
-##Í·ÎÄ¼ş
+æ‰§è¡ŒSQLè¯­å¥çš„ç±»
+## å¤´æ–‡ä»¶
 ```cpp
 #include <cppconn/statement.h>
 ```
-##Àà
-ÊÇÒ»¸ö½Ó¿ÚÀà¡£Ö»°üº¬´¿Ğéº¯Êı¡£
+## ç±»
+æ˜¯ä¸€ä¸ªæ¥å£ç±»ã€‚åªåŒ…å«çº¯è™šå‡½æ•°ã€‚
 ```cpp
 sql::Statement *stmt;
-// ´´½¨¶ÔÏó
+// åˆ›å»ºå¯¹è±¡
 stmt = con->createStatement();
 ```
-###³ÉÔ±º¯Êı
+###æˆå‘˜å‡½æ•°
 ```cpp
 	virtual bool excute(const sql::SQLString& sql) = 0;
 ```
-##Demo
+## Demo
 ```cpp
 #include <iostream>
 
@@ -51,11 +51,11 @@ int main()
         cout<<"stmt error"<<endl;
         return -1;
     }
-	// Ö´ĞĞ¸÷ÖÖSQLÓï¾ä
-    stmt->execute("USE test");                                   // Ñ¡ÔñÊı¾İ¿â
-    stmt->execute("DROP TABLE IF EXISTS test");                  // Èç¹û±íÒÑ´æÔÚ£¬ÔòÉ¾³ı
-    stmt->execute("CREATE TABLE test(id INT, label CHAR(1))");   // ´´½¨±í
-    stmt->execute("INSERT INTO test(id, label) VALUES(1, 'a')"); //²åÈëÊı¾İ
+	// æ‰§è¡Œå„ç§SQLè¯­å¥
+    stmt->execute("USE test");                                   // é€‰æ‹©æ•°æ®åº“
+    stmt->execute("DROP TABLE IF EXISTS test");                  // å¦‚æœè¡¨å·²å­˜åœ¨ï¼Œåˆ™åˆ é™¤
+    stmt->execute("CREATE TABLE test(id INT, label CHAR(1))");   // åˆ›å»ºè¡¨
+    stmt->execute("INSERT INTO test(id, label) VALUES(1, 'a')"); //æ’å…¥æ•°æ®
 
     delete stmt;
     delete con;
