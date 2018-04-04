@@ -1,31 +1,31 @@
 PreparedStatement
 =================
-ÊÇÒ»ÖÖÌØÊâµÄ¡°Óï¾ä¡±Àà¡£
-- StatementÀàÖ´ĞĞµÄÓï¾äÖ»ÄÜÊÇ¾²Ì¬µÄ×Ö·û´® 
-- PreparedStatementÀàÖ´ĞĞµÄÓï¾ä¿ÉÒÔº¬ÓĞ±äÁ¿£¨²ÉÓÃÕ¼Î»·ûË¼ÏëÊµÏÖ£©
+æ˜¯ä¸€ç§ç‰¹æ®Šçš„â€œè¯­å¥â€ç±»ã€‚
+- Statementç±»æ‰§è¡Œçš„è¯­å¥åªèƒ½æ˜¯é™æ€çš„å­—ç¬¦ä¸² 
+- PreparedStatementç±»æ‰§è¡Œçš„è¯­å¥å¯ä»¥å«æœ‰å˜é‡ï¼ˆé‡‡ç”¨å ä½ç¬¦æ€æƒ³å®ç°ï¼‰
 
-##Í·ÎÄ¼ş
+## å¤´æ–‡ä»¶
 ```cpp
 #include <cppconn/prepared_statement.h>
 ```
-##Àà
+## ç±»
 ```cpp
 PreparedStatement *pstmt;
-// ´´½¨¶ÔÏó
+// åˆ›å»ºå¯¹è±¡
 pstmt = con->prepareStatement("INSERT INTO test(id, label) VALUES(?, ?)");
 ```
-Í¨¹ıConnector¶ÔÏóµÄprepareStatementº¯ÊıÀ´´´½¨¸ÃÀà¶ÔÏó¡£Æä²ÎÊıÊÇÒ»¸öº¬ÓĞÕ¼Î»·û£¨**?**£©µÄSQLÓï¾ä¡£
-###Ìî³äÕ¼Î»·û
+é€šè¿‡Connectorå¯¹è±¡çš„prepareStatementå‡½æ•°æ¥åˆ›å»ºè¯¥ç±»å¯¹è±¡ã€‚å…¶å‚æ•°æ˜¯ä¸€ä¸ªå«æœ‰å ä½ç¬¦ï¼ˆ**?**ï¼‰çš„SQLè¯­å¥ã€‚
+### å¡«å……å ä½ç¬¦
 ```cpp
-pstmt->setInt(1, 2);       // ¸øµÚÒ»¸öÕ¼Î»·ûÌî³äÊı×Ö2
-pstmt->setString(2, "b");  // ¸øµÚ¶ş¸öÕ¼Î»·ûÌî³ä×Ö·û´®"b"
+pstmt->setInt(1, 2);       // ç»™ç¬¬ä¸€ä¸ªå ä½ç¬¦å¡«å……æ•°å­—2
+pstmt->setString(2, "b");  // ç»™ç¬¬äºŒä¸ªå ä½ç¬¦å¡«å……å­—ç¬¦ä¸²"b"
 ```
-###Ö´ĞĞSQL
+###æ‰§è¡ŒSQL
 ```cpp
 pstmt->execute();
 ```
 
-##Demo
+## Demo
 ```cpp
 #include <iostream>
 
