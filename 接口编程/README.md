@@ -1,32 +1,33 @@
-MySQL Connector/C++½Ó¿Ú±à³Ì
+MySQL Connector/C++æ¥å£ç¼–ç¨‹
 ============================
-##Í·ÎÄ¼şÂ·¾¶
+## å¤´æ–‡ä»¶è·¯å¾„
 ```
 include/
-©À©¤©¤ cppconn
-©¦   ©À©¤©¤ build_config.h
-©¦   ©À©¤©¤ config.h
-©¦   ©À©¤©¤ connection.h
-©¦   ©À©¤©¤ datatype.h
-©¦   ©À©¤©¤ driver.h
-©¦   ©À©¤©¤ exception.h
-©¦   ©À©¤©¤ metadata.h
-©¦   ©À©¤©¤ parameter_metadata.h
-©¦   ©À©¤©¤ prepared_statement.h
-©¦   ©À©¤©¤ resultset.h
-©¦   ©À©¤©¤ resultset_metadata.h
-©¦   ©À©¤©¤ sqlstring.h
-©¦   ©À©¤©¤ statement.h
-©¦   ©À©¤©¤ variant.h
-©¦   ©À©¤©¤ version_info.h
-©¦   ©¸©¤©¤ warning.h
-©À©¤©¤ mysql_connection.h
-©À©¤©¤ mysql_driver.h
-©¸©¤©¤ mysql_error.h
+â”œâ”€â”€ cppconn
+â”‚   â”œâ”€â”€ build_config.h
+â”‚   â”œâ”€â”€ config.h
+â”‚   â”œâ”€â”€ connection.h
+â”‚   â”œâ”€â”€ datatype.h
+â”‚   â”œâ”€â”€ driver.h
+â”‚   â”œâ”€â”€ exception.h
+â”‚   â”œâ”€â”€ metadata.h
+â”‚   â”œâ”€â”€ parameter_metadata.h
+â”‚   â”œâ”€â”€ prepared_statement.h
+â”‚   â”œâ”€â”€ resultset.h
+â”‚   â”œâ”€â”€ resultset_metadata.h
+â”‚   â”œâ”€â”€ sqlstring.h
+â”‚   â”œâ”€â”€ statement.h
+â”‚   â”œâ”€â”€ variant.h
+â”‚   â”œâ”€â”€ version_info.h
+â”‚   â””â”€â”€ warning.h
+â”œâ”€â”€ mysql_connection.h
+â”œâ”€â”€ mysql_driver.h
+â””â”€â”€ mysql_error.h
 ```
-##±àÒë»·¾³
-ĞèÒª´æÔÚboost¿â¡£  
-Ò»ÖÖ¿ÉÄÜg++µÄ±àÒëÑ¡Ïî£º
+## ç¼–è¯‘ç¯å¢ƒ
+éœ€è¦å­˜åœ¨booståº“ã€‚  
+ä¸€ç§å¯èƒ½g++çš„ç¼–è¯‘é€‰é¡¹ï¼š
+
 ```makefile
 CFLAGS  =  -I/usr/local/mysql/include \
            -I/usr/local/boost/include \
@@ -35,5 +36,5 @@ CFLAGS  =  -I/usr/local/mysql/include \
            -Wl,-rpath=/usr/local/mysql/lib \
            -lmysqlcppconn \
 ```
-Èç¹ûmysqlµÄ¿âÂ·¾¶Ã»ÓĞ±»±à¼­ÔÚ**/etc/ld.so.conf.d/**Ä¿Â¼ÖĞ£¨ÒªÓĞrootÈ¨ÏŞ£¬²¢ÓÃldconfigÃüÁîË¢ĞÂ£©µÄ»°£¬  
-ÔòĞèÒªÓÃ**-Wl,-rpath**Ñ¡ÏîÖ¸¶¨¡£
+å¦‚æœmysqlçš„åº“è·¯å¾„æ²¡æœ‰è¢«ç¼–è¾‘åœ¨**/etc/ld.so.conf.d/**ç›®å½•ä¸­ï¼ˆè¦æœ‰rootæƒé™ï¼Œå¹¶ç”¨ldconfigå‘½ä»¤åˆ·æ–°ï¼‰çš„è¯ï¼Œ  
+åˆ™éœ€è¦ç”¨**-Wl,-rpath**é€‰é¡¹æŒ‡å®šã€‚
