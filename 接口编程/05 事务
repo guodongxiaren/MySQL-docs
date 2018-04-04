@@ -1,0 +1,19 @@
+# 事务
+
+```c
+Connection *con;
+```
+## 关闭自动提交
+```c
+con->setAutoCommit(false);
+```
+
+## 提交事务
+```c
+con->commit();
+```
+
+## 事务回滚
+```c
+con->rollback();
+```
