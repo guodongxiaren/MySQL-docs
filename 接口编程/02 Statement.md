@@ -12,7 +12,7 @@ sql::Statement *stmt;
 // 创建对象
 stmt = con->createStatement();
 ```
-###成员函数
+### 成员函数
 ```cpp
 	virtual bool excute(const sql::SQLString& sql) = 0;
 ```
