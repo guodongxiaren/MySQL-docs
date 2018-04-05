@@ -20,7 +20,7 @@ pstmt = con->prepareStatement("INSERT INTO test(id, label) VALUES(?, ?)");
 pstmt->setInt(1, 2);       // 给第一个占位符填充数字2
 pstmt->setString(2, "b");  // 给第二个占位符填充字符串"b"
 ```
-###执行SQL
+### 执行SQL
 ```cpp
 pstmt->execute();
 ```
